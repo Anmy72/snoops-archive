@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Placeholder street archive entry">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#27272a"/>
+      <stop offset="1" stop-color="#09090b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <path d="M0 690 300 500 540 620 780 420 1200 700V900H0Z" fill="#f4f4f5" fill-opacity="0.06"/>
+  <path d="M0 760 240 620 470 710 720 560 980 680 1200 590V900H0Z" fill="#f4f4f5" fill-opacity="0.04"/>
+  <rect x="90" y="140" width="180" height="300" fill="none" stroke="#f4f4f5" stroke-opacity="0.35" stroke-width="2"/>
+  <rect x="930" y="200" width="150" height="240" fill="none" stroke="#f4f4f5" stroke-opacity="0.28" stroke-width="2"/>
+  <text x="600" y="820" fill="#f4f4f5" font-family="Arial, Helvetica, sans-serif" font-size="34" letter-spacing="14" text-anchor="middle">STREET PLACEHOLDER</text>
+</svg>

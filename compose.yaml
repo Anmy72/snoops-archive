@@ -1,0 +1,27 @@
+services:
+  backend:
+    build:
+      context: ./backend
+    environment:
+      PIWIGO_URL: ${PIWIGO_URL:-http://host.docker.internal:8080}
+      PIWIGO_PUBLIC_URL: ${PIWIGO_PUBLIC_URL:-http://localhost:8080}
+      PIWIGO_API_KEY_ID: ${PIWIGO_API_KEY_ID:?PIWIGO_API_KEY_ID must be set}
+      PIWIGO_API_KEY_SECRET: ${PIWIGO_API_KEY_SECRET:?PIWIGO_API_KEY_SECRET must be set}
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:5173,http://127.0.0.1:5173}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    ports:
+      - "${BACKEND_PORT:-8000}:8000"
+    volumes:
+      - backend_data:/app/data
+
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "${FRONTEND_PORT:-3000}:80"
+    depends_on:
+      - backend
+
+volumes:
+  backend_data:
